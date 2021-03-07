@@ -36,6 +36,10 @@ button.add_player_btn {
   border-radius: 7px;
   box-shadow: 0px 5px 15px #00000085;
 }
+.card-infos {
+  max-width: 500px;
+  margin: 30px auto !important;
+}
 .player_name input {
   width: 100%;
 }
@@ -79,4 +83,9 @@ button.decrement {
   border-radius: 5px;
   color: #0D065A;
   font-weight: 500;
+}
+.App > .container {
+  background-color: lightgrey;
+  padding: 30px 0;
+  min-height: 100vh;
 }
