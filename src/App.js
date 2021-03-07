@@ -49,12 +49,16 @@ class App extends Component {
         <Header />
         <div className="App">
           <div className="container">
-            {this.state.items.length > 0 &&
+            {this.state.items.length > 0 ?
               <div className="card-infos row d-flex justify-content-between">
                 <p>Total Players: {this.state.items.length}</p>
                 <button className="delete-all" onClick={this.deleteAll}><RiDeleteBin5Line /> Delete all</button>
               </div>
-            
+            :
+            <div className="card-infos-no-player text-center">
+                <h2>No players in list!</h2>
+                <p>Click add player button to add players</p>
+            </div>
             }
             {this.state.items.map(item => (
               <Card 
