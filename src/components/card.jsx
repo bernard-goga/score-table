@@ -16,7 +16,9 @@ class Card extends Component {
         this.setState({ count: this.state.count + 1 });
     };
     handleDecrement = e => {
-        this.setState({ count: this.state.count - 1 });
+        if(this.state.count != 0) {
+            this.setState({count: this.state.count - 1 });
+        }
     };
     handleChange = e => {
         this.setState({value: e.target.value});

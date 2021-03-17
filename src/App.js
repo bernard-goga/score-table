@@ -15,8 +15,13 @@ class App extends Component {
     
   addItems = () => {
     let items = [...this.state.items];
-    // let lastId = Math.max.apply(null, items.map(item => item.id));
-    let lastId = this.state.items.length;
+    let maxId = Math.max.apply(null, items.map(item => item.id));
+    let lastId;
+    if(this.state.items.length < 1 ) {
+      lastId = this.state.items.length;
+    } else {
+      lastId = maxId;
+    }
     let newId = lastId + 1;
     this.setState(state => {
       const newItem = {
